@@ -17,7 +17,7 @@ var bio = {
 	"skills": [
 		"music composition", "developing websites", "writing things", "Javascript", "jQuery", "CSS", "HTML5", "education"
 	],
-	"bioPic": "images/fry.jpg"
+	"bioPic": "images/profilephoto.jpg"
 }
 
 bio.displayRole = function() {
@@ -47,6 +47,12 @@ bio.displayContacts = function() {
 	$("#topContacts").append(formattedGithub);
 	$("#topContacts").append(formattedBlog);
 	$("#topContacts").append(formattedLocation);
+	$("#footerContacts").append(formattedMobile);
+	$("#footerContacts").append(formattedEmail);
+	$("#footerContacts").append(formattedTwitter);
+	$("#footerContacts").append(formattedGithub);
+	$("#footerContacts").append(formattedBlog);
+	$("#footerContacts").append(formattedLocation);
 }
 
 bio.displayContacts();
@@ -183,6 +189,20 @@ var education = {
 		"major": "Organ Performance",
 		"dates": "2010"
 	}
+	],
+	"onlineCourses": [
+	{
+		"title": "CS101: Intro to Computer Science",
+		"school": "Udacity",
+		"date": "March 2013",
+		"url": "www.udacity.com"
+	},
+	{
+		"title": "Front End Web Developer Nanodegree",
+		"school": "Udacity",
+		"date": "Anticipated August 2015",
+		"url": "www.udacity.com"
+	}
 	]
 }
 
@@ -199,6 +219,18 @@ education.display = function() {
 		$(".education-entry:last").append(formattedDates);
 		$(".education-entry:last").append(formattedLocation);
 		$(".education-entry:last").append(formattedMajor);
+	}
+	$("#education").append(HTMLonlineClasses);
+	for(course in education.onlineCourses) {
+		$("#education").append(HTMLschoolStart);
+		var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
+		var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
+		var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].date);
+		var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
+		var formattedTitleSchool = formattedOnlineTitle + formattedOnlineSchool;
+		$(".education-entry:last").append(formattedTitleSchool);
+		$(".education-entry:last").append(formattedOnlineDates);
+		$(".education-entry:last").append(formattedOnlineURL);
 	}
 }
 
