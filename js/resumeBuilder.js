@@ -1,6 +1,5 @@
 
 
-//THe last tile in Leeson 1 Javascript Baiscs shows how to format these four objects
 
 var bio = {
 	"name" : "Stephen Baker",
@@ -13,7 +12,7 @@ var bio = {
 		"location": "Spencer, IA",
 		"blog": "www.stephengbaker.com"
 	},
-	"welcomeMessage": "lorem ipsum dolor sit amet",
+	"welcomeMessage": "I'm passionate about combining my creative abilities with my front-end development skills to create innovative, data-driven online music education methods and apps",
 	"skills": [
 		"music composition", "developing websites", "writing things", "Javascript", "jQuery", "CSS", "HTML5", "education"
 	],
