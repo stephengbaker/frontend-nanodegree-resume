@@ -15,7 +15,7 @@
 
 h1 {
   font-size: 40px;
-  color: white;
+  color: #FFD9A1;
   line-height: 48px;
   display: inline;
 }
@@ -23,7 +23,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: red;
+  color: #9C8360;
   line-height: 29px;
   padding: 10px;
 }
@@ -81,21 +81,21 @@ a {
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #F3F3F3;
+  color: #FFD9A1;
   line-height: 28px;
 }
 
 #skillsH3 {
-  color: red;
+  color: #FFD9A1;
   display: none;
 }
 
 .orange {
-  background-color: #F5AE23;
+  background-color: #4B5D6D;
 }
 
 .orange-text {
-  color: red;
+  color: #FFD9A1;
 }
 
 .white-text {
@@ -104,7 +104,7 @@ a {
 }
 
 .gray {
-  background-color: #F3F3F3;
+  background-color: #E4EFF7;
   padding-bottom: 10px;
   clear:both;
 }

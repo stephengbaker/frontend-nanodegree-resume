@@ -3,7 +3,7 @@
 
 var bio = {
 	"name" : "Stephen Baker",
-	"role" : "Algorithmic Composer",
+	"role" : "Musician & Developer",
 	"contacts" : {
 		"mobile": "555-555-5555",
 		"email": "stephen@example.com",
@@ -12,28 +12,19 @@ var bio = {
 		"location": "Spencer, IA",
 		"blog": "www.stephengbaker.com"
 	},
-	"welcomeMessage": "I'm passionate about combining my creative abilities with my front-end development skills to create innovative, data-driven online music education methods and apps",
+	"welcomeMessage": "I am a front-end developer and avante-garde composer with a passion for creating music \
+	pedagogy apps and algorithmic compositional tools for educational or religious institutions and commercial enterprises.",
 	"skills": [
-		"music composition", "developing websites", "writing things", "Javascript", "jQuery", "CSS", "HTML5", "education"
+		"Algorithmic Music", "Python", "UX Design", "Music Pedagogy", "Javascript", "jQuery", "CSS", "HTML5", "Bootstrap", "LilyPond", "MusicXML", "GitHub", "UNIX", "MS Office", "Finale", "Graphic Design", "Writing", "Organ", "Piano", "Harpsichord", "Violin", "Viola", "Ukulele"
 	],
 	"bioPic": "images/profilephoto.jpg"
 }
 
-bio.displayRole = function() {
+bio.display = function() {
 	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 	$("#header").prepend(formattedRole);
-}
-
-bio.displayRole();
-
-bio.displayName = function() {
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
 	$("#header").prepend(formattedName);
-}
-
-bio.displayName();
-
-bio.displayContacts = function() {
 	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
 	var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
@@ -52,25 +43,10 @@ bio.displayContacts = function() {
 	$("#footerContacts").append(formattedGithub);
 	$("#footerContacts").append(formattedBlog);
 	$("#footerContacts").append(formattedLocation);
-}
-
-bio.displayContacts();
-
-bio.displayPic = function() {
 	var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
 	$("#header").append(formattedBioPic);
-}
-
-bio.displayPic();
-
-bio.displayWelcomeMessage = function() {
 	var formattedWelcomeMessage = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
 	$("#header").append(formattedWelcomeMessage);
-}
-
-bio.displayWelcomeMessage();
-
-bio.displaySkills = function() {
 	if(bio.skills.length > 0) {
 		$("#header").append(HTMLskillsStart);
 		for(skill in bio.skills) {
@@ -80,7 +56,7 @@ bio.displaySkills = function() {
 	}
 }
 
-bio.displaySkills();
+bio.display();
 
 var work = {
 	"jobs": [
@@ -126,7 +102,7 @@ $(document).click(function(loc) {
 	logClicks(x,y);
 });
 
-
+/*
 function inName() {
 	bio.name = bio.name.split(" ");
 	console.log(name);
@@ -137,7 +113,7 @@ function inName() {
 }
 
 $("#main").append(internationalizeButton);
-
+*/
 
 var projects = {
 	"list": [
@@ -176,7 +152,7 @@ var education = {
 	"schools": [
 	{
 		"name": "Central Michigan University",
-		"location": "Mt. Pleasant, MI, US",
+		"location": "Mt. Pleasant, MI",
 		"degree": "BMus",
 		"major": "Organ Performance",
 		"dates": "2008"
